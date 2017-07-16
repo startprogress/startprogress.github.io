@@ -256,6 +256,119 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/16/css中的height与line-height/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Andrew Zhang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://ww2.sinaimg.cn/mw690/a66fbe85jw8f3tphqz1ptj20ku0ku40g.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="求索">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/16/css中的height与line-height/" itemprop="url">css中的height与line-height</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-16T17:39:30+08:00">
+                2017-07-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="css中height-与-line-height"><a href="#css中height-与-line-height" class="headerlink" title="css中height 与 line-height"></a>css中height 与 line-height</h1><p>　　结合下图来说明：<br>　　<img src="height-lineheight.png" alt=""><br>　　图中每一行从上到下四条线分别是顶线、中线、基线、底线，就是英语的四线三格，vertical-align属性中有top&gt;、middle、baseline、bottom，就是和这四条线相关。行高是指上下文本行的基线间的垂直距离，即图中两条红线间垂<br>直距离（倒数第二根叫基线，最后一根叫底线，切记）。<br>　　对于每一个行内元素，会生成一个行内框，行内框是一个浏览器渲染模型中的一个概念，无法显示出来，在没有其<br>他因素影响的时候（padding等），行内框等于内容区域，而设定行高时行内框高度不变，半行距【（行高-字体size）<br>/2】分别增加/减少到内容区域的上下两边（深蓝色区域）。当字体足够大的时候，会发生两行之间的重叠。比较常见&gt;的设定是height 和 line-height 设为1.2em,也就是字体大小的1.2倍<br>　　<img src="height-lineheight2.png" alt=""><br>　　每一行的行框高度等于本行内所有元素中行内框最大的值（以行高值最大的行内框为基准，其他行内框采用自己的<br>对齐方式向基准对齐，最终计算行框的高度），当有多行内容时，每行都会有自己的行框。<br>　　<img src="height-lineheight3.png" alt=""><br>　　根据布局规则，块内height为auto时，高度为块内行框累加高和其内普通流块高之和<br>块内height为非auto时，块高为 height 指定高度。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>　　height是指容器的高度，用于设定容器的尺寸，也就是包含块高度。但不是说所有块内的内容只能限制于固定高度内展<br>示，块高度是确定的，但内容的真实高度是可以扩展的。<br>　　line-height是指两行字之间的高度。用于确定行间距。height和line-height设为一样的值可以实现垂直居中。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/07/Docker入门/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -524,7 +637,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
