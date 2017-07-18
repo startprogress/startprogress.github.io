@@ -93,17 +93,17 @@
 
 
 
-<meta name="description" content="在我试图模拟登陆某教务网站进行选课的时候，发现网站采用Adobe Flex技术，进行了AMF编码，无法直接用chrome开发工具或者Firefox的firebug进行抓包，request的内容都是乱码。然后通过在网上搜索，发现Mac上的抓包工具Charles（收费软件，可试用）比较好用，而后又偶然发现了一个用于移动端的抓包工具mitmproxy，做相应配置以后还可以抓&amp;gt;取https的包。">
+<meta name="description" content="浏览器内核包括渲染引擎和JS引擎，但是由于JS引擎相对独立，所以一说到浏览器内核我们通常认为指的是渲染引擎，负责网页的渲染、排版等。　　本文简要介绍一下主流的五个浏览器内核： 一、Trident内核（IE）　　代表浏览器是IE浏览器，又称作IE内核或者MSHTML，它只能用在Windos平台，非开源，版本较多，存在很多兼容性问题，所以IE浏览器是很多前端工程师头疼的对象。 二、Gecko内核（">
 <meta name="keywords" content="技术">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mac 抓包工具">
-<meta property="og:url" content="http://yoursite.com/2017/01/03/Mac-抓包工具/index.html">
+<meta property="og:title" content="浏览器内核介绍">
+<meta property="og:url" content="http://yoursite.com/2017/07/18/浏览器内核介绍/index.html">
 <meta property="og:site_name" content="求索">
-<meta property="og:description" content="在我试图模拟登陆某教务网站进行选课的时候，发现网站采用Adobe Flex技术，进行了AMF编码，无法直接用chrome开发工具或者Firefox的firebug进行抓包，request的内容都是乱码。然后通过在网上搜索，发现Mac上的抓包工具Charles（收费软件，可试用）比较好用，而后又偶然发现了一个用于移动端的抓包工具mitmproxy，做相应配置以后还可以抓&amp;gt;取https的包。">
-<meta property="og:updated_time" content="2017-07-15T02:29:23.000Z">
+<meta property="og:description" content="浏览器内核包括渲染引擎和JS引擎，但是由于JS引擎相对独立，所以一说到浏览器内核我们通常认为指的是渲染引擎，负责网页的渲染、排版等。　　本文简要介绍一下主流的五个浏览器内核： 一、Trident内核（IE）　　代表浏览器是IE浏览器，又称作IE内核或者MSHTML，它只能用在Windos平台，非开源，版本较多，存在很多兼容性问题，所以IE浏览器是很多前端工程师头疼的对象。 二、Gecko内核（">
+<meta property="og:updated_time" content="2017-07-18T11:55:49.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mac 抓包工具">
-<meta name="twitter:description" content="在我试图模拟登陆某教务网站进行选课的时候，发现网站采用Adobe Flex技术，进行了AMF编码，无法直接用chrome开发工具或者Firefox的firebug进行抓包，request的内容都是乱码。然后通过在网上搜索，发现Mac上的抓包工具Charles（收费软件，可试用）比较好用，而后又偶然发现了一个用于移动端的抓包工具mitmproxy，做相应配置以后还可以抓&amp;gt;取https的包。">
+<meta name="twitter:title" content="浏览器内核介绍">
+<meta name="twitter:description" content="浏览器内核包括渲染引擎和JS引擎，但是由于JS引擎相对独立，所以一说到浏览器内核我们通常认为指的是渲染引擎，负责网页的渲染、排版等。　　本文简要介绍一下主流的五个浏览器内核： 一、Trident内核（IE）　　代表浏览器是IE浏览器，又称作IE内核或者MSHTML，它只能用在Windos平台，非开源，版本较多，存在很多兼容性问题，所以IE浏览器是很多前端工程师头疼的对象。 二、Gecko内核（">
 
 
 
@@ -131,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/01/03/Mac-抓包工具/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/07/18/浏览器内核介绍/"/>
 
 
 
 
 
-  <title>Mac 抓包工具 | 求索</title>
+  <title>浏览器内核介绍 | 求索</title>
   
 
 
@@ -256,7 +256,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/01/03/Mac-抓包工具/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/18/浏览器内核介绍/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Andrew Zhang">
@@ -273,7 +273,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Mac 抓包工具</h1>
+          <h1 class="post-title" itemprop="name headline">浏览器内核介绍</h1>
         
 
         <div class="post-meta">
@@ -285,8 +285,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-01-03T11:13:09+08:00">
-                2017-01-03
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-18T19:55:08+08:00">
+                2017-07-18
               </time>
             
 
@@ -320,7 +320,14 @@
       
 
       
-        <p>　　在我试图模拟登陆某教务网站进行选课的时候，发现网站采用Adobe Flex技术，进行了AMF编码，无法直接用chrome开发工具或者Firefox的firebug进行抓包，request的内容都<br>是乱码。然后通过在网上搜索，发现Mac上的抓包工具Charles（收费软件，可试用）比较好用，而后又偶然发现了一个用于移动端的抓包工具mitmproxy，做相应配置以后还可以抓&gt;取https的包。相关介绍在网上很多，这里贴一下我看到的几个链接，关于flex网站抓取，Charles使用和mitmproxy配置及使用。<br>　　<a href="http://www.site-digger.com/html/articles/20160418/121.html" target="_blank" rel="external">Flex网站抓取</a><br>　　<a href="http://blog.devtang.com/2015/11/14/charles-introduction/" target="_blank" rel="external">Charles使用</a><br>　　<a href="https://gold.xitu.io/post/584b711d8e450a006c586ca6" target="_blank" rel="external">mitmproxy使用</a></p>
+        <p>　　浏览器内核包括渲染引擎和JS引擎，但是由于JS引擎相对独立，所以一说到浏览器内核我们通常认为指的是渲染引擎，负责网页的渲染、排版等。<br>　　本文简要介绍一下主流的五个浏览器内核：</p>
+<h3 id="一、Trident内核（IE）"><a href="#一、Trident内核（IE）" class="headerlink" title="一、Trident内核（IE）"></a>一、Trident内核（IE）</h3><p>　　代表浏览器是IE浏览器，又称作IE内核或者MSHTML，它只能用在Windos平台，非开源，版本较多，存在很多兼容性问题，所以IE浏览器是很多前端工程师头疼的对象。</p>
+<h3 id="二、Gecko内核（Firefox）"><a href="#二、Gecko内核（Firefox）" class="headerlink" title="二、Gecko内核（Firefox）"></a>二、Gecko内核（Firefox）</h3><p>　　代表作品是火狐浏览器，它的特点是开源，跨平台，在多种操作系统均可使用。Linux的图形化操作系统一般默认会装Firefox，其他内核的浏览器的支持并不是很好。</p>
+<h3 id="三、WebKit内核（Safari）"><a href="#三、WebKit内核（Safari）" class="headerlink" title="三、WebKit内核（Safari）"></a>三、WebKit内核（Safari）</h3><p>　　它是一个开源的浏览器引擎，前身是KDE小组的KHTML，当年苹果在比较了Gecko和KHTML后，选择了后者，看中其清晰的源码结构和极快的渲染速度。WebKit包含了WebCore排版引擎和JSCore引擎。早年的Chrome（Chromium）和现在的Android手机也是WebKit内核。</p>
+<h3 id="四、Presto内核（Opera）"><a href="#四、Presto内核（Opera）" class="headerlink" title="四、Presto内核（Opera）"></a>四、Presto内核（Opera）</h3><p>　　商业引擎，是Opera Software开发的内核，但后来Opera弃用，投入Google阵营，先改用WebKit，又改用blink。但是内核更改并不会对用户造成太大影响。</p>
+<h3 id="五、Blink内核："><a href="#五、Blink内核：" class="headerlink" title="五、Blink内核："></a>五、Blink内核：</h3><p>　　由Google和Opera Software开发的浏览器模版引擎，2013年发布。现在Chrome的渲染引擎是Blink，JS引擎是V8.</p>
+<h3 id="User-Agent在线解析"><a href="#User-Agent在线解析" class="headerlink" title="User Agent在线解析"></a>User Agent在线解析</h3><p>　　浏览器内核可以根据解析User Agent来判断：<br>　　<a href="http://tool.lu/useragent/" target="_blank" rel="external">UA解析</a></p>
+<h3 id="扩展链接"><a href="#扩展链接" class="headerlink" title="扩展链接"></a>扩展链接</h3><p>　　<a href="http://litten.me/2014/09/26/history-of-browser-useragent/" target="_blank" rel="external">浏览器野史 UserAgent列传（上）</a><br>　　<a href="http://litten.me/2014/10/05/history-of-browser-useragent2/" target="_blank" rel="external">浏览器野史 UserAgent列传（下）</a><br>　　<a href="https://www.zhihu.com/question/30310635" target="_blank" rel="external">知乎-浏览器起源和浏览器内核起源历史</a></p>
 
       
     </div>
@@ -363,15 +370,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/07/17/浅谈像素/" rel="next" title="浅谈像素">
+                <i class="fa fa-chevron-left"></i> 浅谈像素
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/05/07/Docker入门/" rel="prev" title="Docker学习总结">
-                Docker学习总结 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -419,8 +426,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://ww2.sinaimg.cn/mw690/a66fbe85jw8f3tphqz1ptj20ku0ku40g.jpg"
@@ -484,6 +500,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、Trident内核（IE）"><span class="nav-number">1.</span> <span class="nav-text">一、Trident内核（IE）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、Gecko内核（Firefox）"><span class="nav-number">2.</span> <span class="nav-text">二、Gecko内核（Firefox）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、WebKit内核（Safari）"><span class="nav-number">3.</span> <span class="nav-text">三、WebKit内核（Safari）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、Presto内核（Opera）"><span class="nav-number">4.</span> <span class="nav-text">四、Presto内核（Opera）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五、Blink内核："><span class="nav-number">5.</span> <span class="nav-text">五、Blink内核：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#User-Agent在线解析"><span class="nav-number">6.</span> <span class="nav-text">User Agent在线解析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#扩展链接"><span class="nav-number">7.</span> <span class="nav-text">扩展链接</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
