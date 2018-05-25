@@ -93,17 +93,20 @@
 
 
 
-<meta name="description" content="在我试图模拟登陆某教务网站进行选课的时候，发现网站采用Adobe Flex技术，进行了AMF编码，无法直接用chrome开发工具或者Firefox的firebug进行抓包，request的内容都是乱码。然后通过在网上搜索，发现Mac上的抓包工具Charles（收费软件，可试用）比较好用，而后又偶然发现了一个用于移动端的抓包工具mitmproxy，做相应配置以后还可以抓&amp;gt;取https的包。">
+<meta name="description" content="准备开始写一个有关Lucene（包括Solr、ElasticSearch）的文章，作为自己学习的督促和记录。本文是第一篇，轻松起见，本文不涉及具体技术，只顾“泛泛而言”。 　　虽然自己的学习记录，但是为了看到本文的读者不至于浪费时间，我尽力把事情讲清楚，在说明白的前提下最好有点意思，发掘出一些新鲜的内容。比如Lucene是其最开始作者Doug Cutting妻子的名字（有点浪漫），再比如它的发">
 <meta name="keywords" content="技术">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mac 抓包工具">
-<meta property="og:url" content="http://yoursite.com/2017/01/03/Mac-抓包工具/index.html">
+<meta property="og:title" content="Lucene简介">
+<meta property="og:url" content="http://yoursite.com/2018/05/25/Lucene简介/index.html">
 <meta property="og:site_name" content="求索">
-<meta property="og:description" content="在我试图模拟登陆某教务网站进行选课的时候，发现网站采用Adobe Flex技术，进行了AMF编码，无法直接用chrome开发工具或者Firefox的firebug进行抓包，request的内容都是乱码。然后通过在网上搜索，发现Mac上的抓包工具Charles（收费软件，可试用）比较好用，而后又偶然发现了一个用于移动端的抓包工具mitmproxy，做相应配置以后还可以抓&amp;gt;取https的包。">
-<meta property="og:updated_time" content="2017-07-15T02:29:23.000Z">
+<meta property="og:description" content="准备开始写一个有关Lucene（包括Solr、ElasticSearch）的文章，作为自己学习的督促和记录。本文是第一篇，轻松起见，本文不涉及具体技术，只顾“泛泛而言”。 　　虽然自己的学习记录，但是为了看到本文的读者不至于浪费时间，我尽力把事情讲清楚，在说明白的前提下最好有点意思，发掘出一些新鲜的内容。比如Lucene是其最开始作者Doug Cutting妻子的名字（有点浪漫），再比如它的发">
+<meta property="og:image" content="http://yoursite.com/img/lucene.png">
+<meta property="og:image" content="http://yoursite.com/img/Timeline.png">
+<meta property="og:updated_time" content="2018-05-25T16:07:20.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mac 抓包工具">
-<meta name="twitter:description" content="在我试图模拟登陆某教务网站进行选课的时候，发现网站采用Adobe Flex技术，进行了AMF编码，无法直接用chrome开发工具或者Firefox的firebug进行抓包，request的内容都是乱码。然后通过在网上搜索，发现Mac上的抓包工具Charles（收费软件，可试用）比较好用，而后又偶然发现了一个用于移动端的抓包工具mitmproxy，做相应配置以后还可以抓&amp;gt;取https的包。">
+<meta name="twitter:title" content="Lucene简介">
+<meta name="twitter:description" content="准备开始写一个有关Lucene（包括Solr、ElasticSearch）的文章，作为自己学习的督促和记录。本文是第一篇，轻松起见，本文不涉及具体技术，只顾“泛泛而言”。 　　虽然自己的学习记录，但是为了看到本文的读者不至于浪费时间，我尽力把事情讲清楚，在说明白的前提下最好有点意思，发掘出一些新鲜的内容。比如Lucene是其最开始作者Doug Cutting妻子的名字（有点浪漫），再比如它的发">
+<meta name="twitter:image" content="http://yoursite.com/img/lucene.png">
 
 
 
@@ -131,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/01/03/Mac-抓包工具/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/05/25/Lucene简介/"/>
 
 
 
 
 
-  <title>Mac 抓包工具 | 求索</title>
+  <title>Lucene简介 | 求索</title>
   
 
 
@@ -256,7 +259,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/01/03/Mac-抓包工具/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/25/Lucene简介/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Andrew Zhang">
@@ -273,7 +276,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Mac 抓包工具</h1>
+          <h1 class="post-title" itemprop="name headline">Lucene简介</h1>
         
 
         <div class="post-meta">
@@ -285,8 +288,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-01-03T11:13:09+08:00">
-                2017-01-03
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-25T23:35:26+08:00">
+                2018-05-25
               </time>
             
 
@@ -325,7 +328,18 @@
       
 
       
-        <p>　　在我试图模拟登陆某教务网站进行选课的时候，发现网站采用Adobe Flex技术，进行了AMF编码，无法直接用chrome开发工具或者Firefox的firebug进行抓包，request的内容都<br>是乱码。然后通过在网上搜索，发现Mac上的抓包工具Charles（收费软件，可试用）比较好用，而后又偶然发现了一个用于移动端的抓包工具mitmproxy，做相应配置以后还可以抓&gt;取https的包。相关介绍在网上很多，这里贴一下我看到的几个链接，关于flex网站抓取，Charles使用和mitmproxy配置及使用。<br>　　<a href="http://www.site-digger.com/html/articles/20160418/121.html" target="_blank" rel="external">Flex网站抓取</a><br>　　<a href="http://blog.devtang.com/2015/11/14/charles-introduction/" target="_blank" rel="external">Charles使用</a><br>　　<a href="https://gold.xitu.io/post/584b711d8e450a006c586ca6" target="_blank" rel="external">mitmproxy使用</a></p>
+        <p>　　准备开始写一个有关Lucene（包括Solr、ElasticSearch）的文章，作为自己学习的督促和记录。本文是第一篇，轻松起见，本文不涉及具体技术，只顾“泛泛而言”。</p>
+<p>　　虽然自己的学习记录，但是为了看到本文的读者不至于浪费时间，我尽力把事情讲清楚，在说明白的前提下最好有点意思，发掘出一些新鲜的内容。比如Lucene是其最开始作者Doug Cutting妻子的名字（有点浪漫），再比如它的发音是|lu’si:n|,而不是|’lusen|，重音在第二个音节，我很确定这么读因为我在Lucene项目PMC member，<a href="https://www.linkedin.com/in/mikemccand/" target="_blank" rel="external">Michael McCandless</a> 的演讲上亲耳听到，大神也是<a href="https://www.amazon.com/Lucene-Action-Second-Covers-Apache/dp/1933988177/ref=sr_1_1?ie=UTF8&amp;qid=1527263605&amp;sr=8-1&amp;keywords=Lucene+in+Action" target="_blank" rel="external">《Lucene in Action》第二版</a> 的作者，有兴趣的可以看他的<a href="http://blog.mikemccandless.com/" target="_blank" rel="external">博客</a>。下面进入正题:</p>
+<p>　　首先，Lucene是用来做什么的。两个字概括：搜索。具体来说，它是一个100% Java实现的全文索引检索工具包，目前已经支持多种编程语言调用API，包括Perl、C++、Python、Ruby等。Lucene是Apache的开源项目，在Apache软件协议下发布，可免费使用。它不是一个完整的文本检索引擎，不能直接作为应用程序（下图展示了Lucene和应用的关系），只提供索引(index)和搜索(search)功能，完整的搜索引擎请移步Solr和Elastic Search（它俩的核心都是Lucene）。索引，是对源数据进行处理，以便加快搜索速度。可以与字典进行类比，使用字典是为了在所有词语中找到我们想要的词，索引是在所有源文件中找到和用户提供关键词最为相关的源文件，字典的词对应着搜索中的源文件，如果字典没有查词的方法，比如拼音、偏旁部首、笔画等，那么我们很难在词语浩如烟海的字典中快速定位想要的词，索引就是在搜索之前需要建立的，类似查字典的一个查询规则或者映射关系，使得查询快捷。具体的索引机制后面会进一步讨论。建立索引之后，我们就可以在索引上进行搜索。搜索引擎会先对query进行解析，提炼关键词，然后在建立好的索引上进行查找，根据一定的关联成都评判规则，把符合用户搜索的文档作为结果按顺序返回。总结一下，Lucene两块主要内容：索引和搜索。<br>　　<br>　　<img src="/img/lucene.png" alt="图1"> </p>
+<p>　　接下来，说一说Lucene的发展过程。Lucene最早是由Doug Cutting写于1999年，然后在2001年9月成为了Apache Jakarta的项目。之后随着自身的发展，在2005年2月成为了Apache的顶级项目。一开始，Lucene下面有Lucene.NET、Mahout、Tika和Nutch等子项目，现在这些项目也变为了独立的顶级项目。在2010年3月，Solr变成了Lucene的子项目，合并了开发者社区。从以上可以看出，Lucene经过19年的发展历程，已经比较成熟了，而且开发者社区非常活跃，版本迭代比较快，截止目前已经到7.3.1版本，这一过程的时间线如图2所示：<br>　　<img src="/img/Timeline.png" alt="图2"> </p>
+<p>　　既然Lucene已经很成熟了，而且还在茁壮发育中，是不是得到了很广泛的应用呢？答案是肯定的。先不说在大公司中的应用，仅仅凭借大度的商业协议提供免费使用，就风靡于各大创业公司、小公司中。尽管免费，但性能强劲，可扩展性强，因此许多大公司也把Lucene引入到自己的技术架构中，承担起搜索引擎核心的功能。这里面的名字耳熟能详：Twitter、LinkedIn、Wikipedia、Amazon、Netflix、Verizon、Paypal、Yelp这些国外公司，以及国内的某些巨头（不点名了）。Lucene仍然在活跃社区的支撑下，在索引很搜索之外，不断丰富功能，比如highlight,facet,suggester,query cashing等等，使其能够适应更多的搜索场景。
+　　
+　　</p>
+<h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章:"></a>参考文章:</h3><ul>
+<li><a href="https://lucene.apache.org/" target="_blank" rel="external">Lucene 官网</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Lucene" target="_blank" rel="external">Lucene Wikipedia</a></li>
+<li><a href="https://www.ibm.com/developerworks/cn/java/j-lo-lucene1/index.html" target="_blank" rel="external">初识Lucene</a></li>
+</ul>
 
       
     </div>
@@ -368,15 +382,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/07/18/浏览器内核介绍/" rel="next" title="浏览器内核介绍">
+                <i class="fa fa-chevron-left"></i> 浏览器内核介绍
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/05/07/Docker入门/" rel="prev" title="Docker学习总结">
-                Docker学习总结 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -424,8 +438,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://ww2.sinaimg.cn/mw690/a66fbe85jw8f3tphqz1ptj20ku0ku40g.jpg"
@@ -489,6 +512,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#参考文章"><span class="nav-number">1.</span> <span class="nav-text">参考文章:</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
